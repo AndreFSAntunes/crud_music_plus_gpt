@@ -9,9 +9,9 @@ public class ApiGPT {
 
         CompletionRequest requisicao = CompletionRequest.builder()
                 .model("gpt-3.5-turbo-instruct") //text-davinci-003 is deprecated
-                .prompt("Descreve sobre o artista, dupla ou banda: " + texto)
-                .maxTokens(1000)
-                .temperature(0.7)
+                .prompt("Descreve resumidamente sobre o artista, dupla ou banda: " + texto)
+                .maxTokens(500)
+                .temperature(0.5)
                 .build();
 
         var resposta = service.createCompletion(requisicao);
